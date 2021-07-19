@@ -1,0 +1,26 @@
+{
+  "name": "school-application-backend",
+  "version": "1.0.0",
+  "description": "The backend to School Application",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artur-Cavalcante/School-Application.git"
+  },
+  "keywords": [
+    "backend",
+    "js",
+    "node.js",
+    "express",
+    "postgres"
+  ],
+  "author": "Artur-Cavalcante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Artur-Cavalcante/School-Application/issues"
+  },
+  "homepage": "https://github.com/Artur-Cavalcante/School-Application#readme"
+}
