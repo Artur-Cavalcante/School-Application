@@ -1,0 +1,21 @@
+{
+  "name": "school-application",
+  "version": "1.0.0",
+  "description": "School Application",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artur-Cavalcante/School-Application.git"
+  },
+  "keywords": [
+    "js",
+    "node.js",
+    "express",
+    "postgres"
+  ],
+  "author": "Artur-Cavalcante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Artur-Cavalcante/School-Application/issues"
+  },
+  "homepage": "https://github.com/Artur-Cavalcante/School-Application#readme"
+}
