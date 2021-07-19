@@ -28,5 +28,7 @@ client.query("SELECT * FROM titulo", (err, res) => {
 
 app.use(express.json());
 app.use(cors());
-//app.use(routes);
+app.get("/api", (request, response) => {
+  response.json("Hello World!");
+});
 app.listen(PORT, () => console.log(`Server running at port ${PORT}`));
