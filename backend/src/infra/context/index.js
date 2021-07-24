@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const db_context = new Sequelize(
+const _sequelize = new Sequelize(
   process.env.DATABASE_NAME,
   process.env.DATABASE_USERNAME,
   process.env.DATABASE_PASSWORD,
@@ -14,4 +14,4 @@ const db_context = new Sequelize(
   }
 );
 
-export { db_context };
+export { _sequelize };
