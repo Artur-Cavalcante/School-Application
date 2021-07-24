@@ -1,6 +1,7 @@
-const { DataTypes } = require("sequelize/types");
+const { DataTypes } = require("sequelize");
+const { _sequelize } = require("@/infra/context");
 
-const TipoCursoModel = sequelize.define(
+const TipoCursoModel = _sequelize.define(
   "tipo_curso",
   {
     id_tipo_curso: {
