@@ -4,7 +4,7 @@ const routes = Router();
 
 const { ProfessorController } = require("@/controllers/professor/professorController");
 const { TituloController } = require("@/controllers/titulo/tituloController");
-const { InstituicacaoController } = require("@/controllers/instituicao/instituicaoController");
+const { InstituicaoController } = require("@/controllers/instituicao/instituicaoController");
 const { CursoController } = require("@/controllers/curso/cursoController");
 const { TipoCursoController } = require("@/controllers/tipo-curso/tipoCursoController");
 const { TipoDisciplinaController } = require("@/controllers/tipo-disciplina/tipoDisciplinaController");
@@ -25,11 +25,11 @@ routes.post("/api/titulo", TituloController.post);
 routes.put("/api/titulo", TituloController.put);
 routes.delete("/api/titulo", TituloController.destroy);
 
-// routes.get("/api/instituicao", InstituicacaoController.get);
-// routes.get("/api/instituicao/:id", InstituicacaoController.get);
-// routes.post("/api/instituicao", InstituicacaoController.post);
-// routes.put("/api/instituicao", InstituicacaoController.put);
-// routes.delete("/api/instituicao", InstituicacaoController.destroy);
+routes.get("/api/instituicao", InstituicaoController.get);
+routes.get("/api/instituicao/:id", InstituicaoController.get);
+routes.post("/api/instituicao", InstituicaoController.post);
+routes.put("/api/instituicao", InstituicaoController.put);
+routes.delete("/api/instituicao", InstituicaoController.destroy);
 
 // routes.get("/api/curso", CursoController.get);
 // routes.get("/api/curso/:id", CursoController.get);

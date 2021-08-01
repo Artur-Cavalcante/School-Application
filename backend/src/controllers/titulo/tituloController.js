@@ -32,7 +32,7 @@ const post = async (request, response) => {
       tx_descricao: titulo.tx_descricao,
     });
 
-    return await response.status(201).json(tituloCriado);
+    return await response.sendStatus(201);
   } catch (error) {
     return await response.status(500).json(error);
   }
