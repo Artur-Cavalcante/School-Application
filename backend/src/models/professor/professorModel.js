@@ -30,7 +30,7 @@ const ProfessorModel = _sequelize.define(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    tx_estado_civil: {
+    tx_telefone: {
       type: DataTypes.STRING,
       length: 13,
       allowNull: false,
@@ -39,6 +39,6 @@ const ProfessorModel = _sequelize.define(
   { tableName: "professor", createdAt: false, updatedAt: false }
 );
 
-TituloModel.hasMany(ProfessorModel);
+ProfessorModel.hasMany(TituloModel);
 
 module.exports = { ProfessorModel };

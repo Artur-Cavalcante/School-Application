@@ -2,22 +2,34 @@ const { Router } = require("express");
 
 const routes = Router();
 
-const { ProfessorController } = require("@/controllers/professor/professorController");
+const {
+  ProfessorController,
+} = require("@/controllers/professor/professorController");
 const { TituloController } = require("@/controllers/titulo/tituloController");
-const { InstituicaoController } = require("@/controllers/instituicao/instituicaoController");
+const {
+  InstituicaoController,
+} = require("@/controllers/instituicao/instituicaoController");
 const { CursoController } = require("@/controllers/curso/cursoController");
-const { TipoCursoController } = require("@/controllers/tipo-curso/tipoCursoController");
-const { TipoDisciplinaController } = require("@/controllers/tipo-disciplina/tipoDisciplinaController");
-const { DisciplinaController } = require("@/controllers/disciplina/disciplinaController");
+const {
+  TipoCursoController,
+} = require("@/controllers/tipo-curso/tipoCursoController");
+const {
+  TipoDisciplinaController,
+} = require("@/controllers/tipo-disciplina/tipoDisciplinaController");
+const {
+  DisciplinaController,
+} = require("@/controllers/disciplina/disciplinaController");
 const { AlunoController } = require("@/controllers/aluno/alunoController");
 const { CursaController } = require("@/controllers/cursa/cursaController");
-const { LecionaController } = require("@/controllers/leciona/lecionaController");
+const {
+  LecionaController,
+} = require("@/controllers/leciona/lecionaController");
 
-// routes.get("/api/professor", ProfessorController.get);
-// routes.get("/api/professor/:id", ProfessorController.get);
-// routes.post("/api/professor", ProfessorController.post);
-// routes.put("/api/professor", ProfessorController.put);
-// routes.delete("/api/professor", ProfessorController.destroy);
+routes.get("/api/professor", ProfessorController.get);
+routes.get("/api/professor/:id", ProfessorController.get);
+routes.post("/api/professor", ProfessorController.post);
+routes.put("/api/professor", ProfessorController.put);
+routes.delete("/api/professor", ProfessorController.destroy);
 
 routes.get("/api/titulo", TituloController.get);
 routes.get("/api/titulo/:id", TituloController.get);
