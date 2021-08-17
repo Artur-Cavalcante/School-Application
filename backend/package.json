@@ -31,9 +31,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "pg": "^8.6.0",
-    "sequelize": "^6.6.5"
-  },
-  "devDependencies": {
+    "sequelize": "^6.6.5",
     "@types/node": "^16.4.2",
     "nodemon": "^2.0.12",
     "rimraf": "^3.0.2",
