@@ -49,17 +49,17 @@ routes.delete("/api/instituicao", InstituicaoController.destroy);
 // routes.put("/api/curso", CursoController.put);
 // routes.delete("/api/curso", CursoController.destroy);
 
-// routes.get("/api/tipo-curso", TipoCursoController.get);
-// routes.get("/api/tipo-curso/:id", TipoCursoController.get);
-// routes.post("/api/tipo-curso", TipoCursoController.post);
-// routes.put("/api/tipo-curso", TipoCursoController.put);
-// routes.delete("/api/tipo-curso", TipoCursoController.destroy);
+routes.get("/api/tipo-curso", TipoCursoController.get);
+routes.get("/api/tipo-curso/:id", TipoCursoController.get);
+routes.post("/api/tipo-curso", TipoCursoController.post);
+routes.put("/api/tipo-curso", TipoCursoController.put);
+routes.delete("/api/tipo-curso", TipoCursoController.destroy);
 
-// routes.get("/api/tipo-disciplina", TipoDisciplinaController.get);
-// routes.get("/api/tipo-disciplina/:id", TipoDisciplinaController.get);
-// routes.post("/api/tipo-disciplina", TipoDisciplinaController.post);
-// routes.put("/api/tipo-disciplina", TipoDisciplinaController.put);
-// routes.delete("/api/tipo-disciplina", TipoDisciplinaController.destroy);
+routes.get("/api/tipo-disciplina", TipoDisciplinaController.get);
+routes.get("/api/tipo-disciplina/:id", TipoDisciplinaController.get);
+routes.post("/api/tipo-disciplina", TipoDisciplinaController.post);
+routes.put("/api/tipo-disciplina", TipoDisciplinaController.put);
+routes.delete("/api/tipo-disciplina", TipoDisciplinaController.destroy);
 
 // routes.get("/api/disciplina", DisciplinaController.get);
 // routes.get("/api/disciplina/:id", DisciplinaController.get);

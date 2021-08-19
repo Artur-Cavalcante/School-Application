@@ -35,10 +35,17 @@ const ProfessorModel = _sequelize.define(
       length: 13,
       allowNull: false,
     },
+    id_titulo: {
+      model: TituloModel,
+      key: "id_titulo",
+      type: DataTypes.INTEGER,
+    },
   },
   { tableName: "professor", createdAt: false, updatedAt: false }
 );
 
-ProfessorModel.hasMany(TituloModel);
+TituloModel.hasMany(ProfessorModel, {
+  foreignKey: "id_titulo",
+});
 
 module.exports = { ProfessorModel };
