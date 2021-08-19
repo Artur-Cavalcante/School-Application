@@ -43,11 +43,11 @@ routes.post("/api/instituicao", InstituicaoController.post);
 routes.put("/api/instituicao", InstituicaoController.put);
 routes.delete("/api/instituicao", InstituicaoController.destroy);
 
-// routes.get("/api/curso", CursoController.get);
-// routes.get("/api/curso/:id", CursoController.get);
-// routes.post("/api/curso", CursoController.post);
-// routes.put("/api/curso", CursoController.put);
-// routes.delete("/api/curso", CursoController.destroy);
+routes.get("/api/curso", CursoController.get);
+routes.get("/api/curso/:id", CursoController.get);
+routes.post("/api/curso", CursoController.post);
+routes.put("/api/curso", CursoController.put);
+routes.delete("/api/curso", CursoController.destroy);
 
 routes.get("/api/tipo-curso", TipoCursoController.get);
 routes.get("/api/tipo-curso/:id", TipoCursoController.get);
