@@ -1,9 +1,9 @@
 const { DataTypes } = require("sequelize");
-const { _sequelize } = require("@/infra/context");
+const { _dbContext } = require("@/infra/context");
 
 const { TituloModel } = require("@/models/titulo/tituloModel");
 
-const ProfessorModel = _sequelize.define(
+const ProfessorModel = _dbContext.define(
   "professor",
   {
     id_professor: {

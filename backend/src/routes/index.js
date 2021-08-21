@@ -67,11 +67,11 @@ routes.delete("/api/tipo-disciplina", TipoDisciplinaController.destroy);
 // routes.put("/api/disciplina", DisciplinaController.put);
 // routes.delete("/api/disciplina", DisciplinaController.destroy);
 
-// routes.get("/api/aluno", AlunoController.get);
-// routes.get("/api/aluno/:id", AlunoController.get);
-// routes.post("/api/aluno", AlunoController.post);
-// routes.put("/api/aluno", AlunoController.put);
-// routes.delete("/api/aluno", AlunoController.destroy);
+routes.get("/api/aluno", AlunoController.get);
+routes.get("/api/aluno/:id", AlunoController.get);
+routes.post("/api/aluno", AlunoController.post);
+routes.put("/api/aluno", AlunoController.put);
+routes.delete("/api/aluno", AlunoController.destroy);
 
 // routes.get("/api/leciona", LecionaController.get);
 // routes.get("/api/leciona/:id", LecionaController.get);
