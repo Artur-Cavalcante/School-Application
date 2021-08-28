@@ -73,16 +73,16 @@ routes.post("/api/aluno", AlunoController.post);
 routes.put("/api/aluno", AlunoController.put);
 routes.delete("/api/aluno", AlunoController.destroy);
 
-// routes.get("/api/leciona", LecionaController.get);
-// routes.get("/api/leciona/:id", LecionaController.get);
-// routes.post("/api/leciona", LecionaController.post);
-// routes.put("/api/leciona", LecionaController.put);
-// routes.delete("/api/leciona", LecionaController.destroy);
+routes.get("/api/leciona", LecionaController.get);
+routes.get("/api/leciona/:id", LecionaController.get);
+routes.post("/api/leciona", LecionaController.post);
+routes.put("/api/leciona", LecionaController.put);
+routes.delete("/api/leciona", LecionaController.destroy);
 
-// routes.get("/api/cursa", CursaController.get);
-// routes.get("/api/cursa/:id", CursaController.get);
-// routes.post("/api/cursa", CursaController.post);
-// routes.put("/api/cursa", CursaController.put);
-// routes.delete("/api/cursa", CursaController.destroy);
+routes.get("/api/cursa", CursaController.get);
+routes.get("/api/cursa/:id", CursaController.get);
+routes.post("/api/cursa", CursaController.post);
+routes.put("/api/cursa", CursaController.put);
+routes.delete("/api/cursa", CursaController.destroy);
 
 module.exports = { routes };

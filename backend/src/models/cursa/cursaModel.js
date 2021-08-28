@@ -37,11 +37,25 @@ const CursaModel = _dbContext.define(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    id_aluno: {
+      model: AlunoModel,
+      key: "id_aluno",
+      type: DataTypes.INTEGER,
+    },
+    id_disciplina: {
+      model: DisciplinaModel,
+      key: "id_aluno",
+      type: DataTypes.INTEGER,
+    },
   },
   { tableName: "cursa", createdAt: false, updatedAt: false }
 );
 
-AlunoModel.hasMany(CursaModel);
-DisciplinaModel.hasMany(CursaModel);
+AlunoModel.hasMany(CursaModel, {
+  foreignKey: "id_aluno",
+});
+DisciplinaModel.hasMany(CursaModel, {
+  foreignKey: "id_disciplina",
+});
 
 module.exports = { CursaModel };
