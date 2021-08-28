@@ -1,17 +1,27 @@
 import { ProfessorModel } from "@/models/professor/professorModel";
+import { pagination } from "@/utils/pagination";
 
 const get = async (request, response) => {
   try {
+    const start = request.query.start;
+    const length = request.query.length;
+
+    const parsedPagination = pagination(start, length);
+
     if (request.params.id) {
       const id = request.params.id;
 
-      const professor = await ProfessorModel.findByPk(id);
+      const professor = await ProfessorModel.findByPk(id, {
+        ...parsedPagination,
+      });
 
       if (!professor) return await response.sendStatus(404);
 
       return await response.status(200).json(professor);
     } else {
-      const professores = await ProfessorModel.findAll();
+      const professores = await ProfessorModel.findAll({
+        ...parsedPagination,
+      });
 
       return await response.status(200).json(professores);
     }

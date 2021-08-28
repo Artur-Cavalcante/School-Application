@@ -1,17 +1,27 @@
 import { AlunoModel } from "@/models/aluno/alunoModel";
+import { pagination } from "@/utils/pagination";
 
 const get = async (request, response) => {
   try {
+    const start = request.query.start;
+    const length = request.query.length;
+
+    const parsedPagination = pagination(start, length);
+
     if (request.params.id) {
       const id = request.params.id;
 
-      const aluno = await AlunoModel.findByPk(id);
+      const aluno = await AlunoModel.findByPk(id, {
+        ...parsedPagination,
+      });
 
       if (!aluno) return await response.sendStatus(404);
 
       return await response.status(200).json(aluno);
     } else {
-      const alunos = await AlunoModel.findAll();
+      const alunos = await AlunoModel.findAll({
+        ...parsedPagination,
+      });
 
       return await response.status(200).json(alunos);
     }

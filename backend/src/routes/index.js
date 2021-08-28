@@ -61,11 +61,11 @@ routes.post("/api/tipo-disciplina", TipoDisciplinaController.post);
 routes.put("/api/tipo-disciplina", TipoDisciplinaController.put);
 routes.delete("/api/tipo-disciplina", TipoDisciplinaController.destroy);
 
-// routes.get("/api/disciplina", DisciplinaController.get);
-// routes.get("/api/disciplina/:id", DisciplinaController.get);
-// routes.post("/api/disciplina", DisciplinaController.post);
-// routes.put("/api/disciplina", DisciplinaController.put);
-// routes.delete("/api/disciplina", DisciplinaController.destroy);
+routes.get("/api/disciplina", DisciplinaController.get);
+routes.get("/api/disciplina/:id", DisciplinaController.get);
+routes.post("/api/disciplina", DisciplinaController.post);
+routes.put("/api/disciplina", DisciplinaController.put);
+routes.delete("/api/disciplina", DisciplinaController.destroy);
 
 routes.get("/api/aluno", AlunoController.get);
 routes.get("/api/aluno/:id", AlunoController.get);

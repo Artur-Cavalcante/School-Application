@@ -1,17 +1,27 @@
 import { TipoDisciplinaModel } from "@/models/tipo-disciplina/tipoDisciplinaModel";
+import { pagination } from "@/utils/pagination";
 
 const get = async (request, response) => {
   try {
+    const start = request.query.start;
+    const length = request.query.length;
+
+    const parsedPagination = pagination(start, length);
+
     if (request.params.id) {
       const id = request.params.id;
 
-      const tipoDisciplina = await TipoDisciplinaModel.findByPk(id);
+      const tipoDisciplina = await TipoDisciplinaModel.findByPk(id, {
+        ...parsedPagination,
+      });
 
       if (!tipoDisciplina) return await response.sendStatus(404);
 
       return await response.status(200).json(tipoDisciplina);
     } else {
-      const tiposDisciplina = await TipoDisciplinaModel.findAll();
+      const tiposDisciplina = await TipoDisciplinaModel.findAll({
+        ...parsedPagination,
+      });
 
       return await response.status(200).json(tiposDisciplina);
     }

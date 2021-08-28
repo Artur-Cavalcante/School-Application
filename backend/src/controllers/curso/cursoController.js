@@ -1,17 +1,27 @@
 import { CursoModel } from "@/models/curso/cursoModel";
+import { pagination } from "@/utils/pagination";
 
 const get = async (request, response) => {
   try {
+    const start = request.query.start;
+    const length = request.query.length;
+
+    const parsedPagination = pagination(start, length);
+
     if (request.params.id) {
       const id = request.params.id;
 
-      const curso = await CursoModel.findByPk(id);
+      const curso = await CursoModel.findByPk(id, {
+        ...parsedPagination,
+      });
 
       if (!curso) return await response.sendStatus(404);
 
       return await response.status(200).json(curso);
     } else {
-      const cursos = await CursoModel.findAll();
+      const cursos = await CursoModel.findAll({
+        ...parsedPagination,
+      });
 
       return await response.status(200).json(cursos);
     }
