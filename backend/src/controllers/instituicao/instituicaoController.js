@@ -1,3 +1,4 @@
+import { CursoModel } from "@/models/curso/cursoModel";
 import { InstituicaoModel } from "@/models/instituicao/instituicaoModel";
 import { pagination } from "@/utils/pagination";
 
@@ -113,8 +114,28 @@ const destroy = async (request, response) => {
   }
 };
 
+const getQtdCursoPorInstituicao = async (request, response) => {
+  try {
+    const start = request.query.start;
+    const length = request.query.length;
+
+    const parsedPagination = pagination(start, length);
+
+    const cursos = await InstituicaoModel.findAll({
+      //raw: true,
+      include: [CursoModel],
+      ...parsedPagination,
+    });
+
+    return await response.status(200).json(cursos);
+  } catch (error) {
+    return await response.status(500).json(error);
+  }
+};
+
 const InstituicaoController = {
   get,
+  getQtdCursoPorInstituicao,
   destroy,
   post,
   put,

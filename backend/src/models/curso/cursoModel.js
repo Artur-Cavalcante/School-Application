@@ -35,6 +35,7 @@ const CursoModel = _dbContext.define(
 InstituicaoModel.hasMany(CursoModel, {
   foreignKey: "id_instituicao",
 });
+
 TipoCursoModel.hasMany(CursoModel, {
   foreignKey: "id_tipo_curso",
 });

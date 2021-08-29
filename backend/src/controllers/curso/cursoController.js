@@ -1,4 +1,5 @@
 import { CursoModel } from "@/models/curso/cursoModel";
+import { InstituicaoModel } from "@/models/instituicao/instituicaoModel";
 import { pagination } from "@/utils/pagination";
 
 const get = async (request, response) => {

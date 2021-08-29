@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const { _dbContext } = require("@/infra/context");
+import { DataTypes } from "sequelize";
+import { _dbContext } from "@/infra/context";
 
 const InstituicaoModel = _dbContext.define(
   "instituicao",
@@ -24,4 +24,4 @@ const InstituicaoModel = _dbContext.define(
   { tableName: "instituicao", createdAt: false, updatedAt: false }
 );
 
-module.exports = { InstituicaoModel };
+export { InstituicaoModel };

@@ -39,6 +39,10 @@ routes.delete("/api/titulo", TituloController.destroy);
 
 routes.get("/api/instituicao", InstituicaoController.get);
 routes.get("/api/instituicao/:id", InstituicaoController.get);
+routes.get(
+  "/api/cursoPorInstituicao",
+  InstituicaoController.getQtdCursoPorInstituicao
+);
 routes.post("/api/instituicao", InstituicaoController.post);
 routes.put("/api/instituicao", InstituicaoController.put);
 routes.delete("/api/instituicao", InstituicaoController.destroy);
