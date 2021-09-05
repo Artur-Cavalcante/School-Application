@@ -81,10 +81,7 @@ routes.delete("/api/leciona", LecionaController.destroy);
 
 routes.get("/api/cursa", CursaController.get);
 routes.get("/api/cursa/:id", CursaController.get);
-routes.get(
-  "/api/getQtdReprovacoesPorAno",
-  CursaController.getQtdReprovacoesPorAno
-);
+routes.get("/api/reprovacoesPorAno", CursaController.getQtdReprovacoesPorAno);
 routes.post("/api/cursa", CursaController.post);
 routes.put("/api/cursa", CursaController.put);
 routes.delete("/api/cursa", CursaController.destroy);
