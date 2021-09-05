@@ -184,6 +184,7 @@ const getQtdReprovacoesPorAno: RequestHandler = async (
         ],
       ],
       group: ["id_ano"],
+      order: [["id_ano", "ASC"]],
       ...parsedPagination,
     })) as IReprovacoesPorAno[];
 
